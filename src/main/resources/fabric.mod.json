@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "x_explotion_utils",
+	"version": "${version}",
+	"name": "X_explotion Utils",
+	"description": "Utility mod for X_explotion's other mods!",
+	"authors": [
+		"X_explotion!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "LGPL-3.0-or-later",
+	"icon": "assets/x_explotion_utils/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.xexplotion.x_explotion_utils.X_explotionUtils"
+		],
+		"client": [
+			"net.xexplotion.x_explotion_utils.X_explotionUtilsClient"
+		]
+	},
+	"mixins": [
+		"x_explotion_utils.mixins.json",
+		{
+			"config": "x_explotion_utils.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
